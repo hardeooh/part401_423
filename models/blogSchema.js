@@ -1,4 +1,13 @@
 const mongoose = require('mongoose')
+const url = process.env.MONGODB_URI
+
+mongoose.connect(url)
+  .then((result) => {
+    console.log('connecting to', url);
+  })
+  .catch((error) => {
+    console.log('error connecting to mongoDB', error.message);
+  })
 
 const blogSchema = new mongoose.Schema({
   title: String,
@@ -8,8 +17,5 @@ const blogSchema = new mongoose.Schema({
 })
 
 const Blog = mongoose.model('Blog', blogSchema)
-
-const mongoUrl = 'mongodb://localhost/bloglist'
-mongoose.connect(mongoUrl)
 
 module.exports = Blog
