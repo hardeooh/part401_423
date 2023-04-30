@@ -15,7 +15,7 @@ morgan.token('id', function getId (req) {
 })
 
 app.listen(config.PORT, () => {
-  logger.info(`Server running on port ${config.PORT}`)
+  logger.info(`Server running on port ${config.PORT} frontend`)
 })
 
 
