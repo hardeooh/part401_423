@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --verbose",
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,5 @@
   }, 
   "jest": {
     "testEnvironment": "node"
-  },
+  }
 }
